@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05881aba-0920-42bd-b7fd-d14c630b165c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/astar_alg.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/astar_alg.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/breadthfirst_alg.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/breadthfirst_alg.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dijkstras_alg.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/dijkstras_alg.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/game.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/greedybestfirst_alg.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/greedybestfirst_alg.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="05881aba-0920-42bd-b7fd-d14c630b165c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,5 +33,11 @@
       <updated>1596023600009</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="104" y="50" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596153397910">
+      <screen x="0" y="23" width="1280" height="731" />
+    </state>
+    <state x="104" y="50" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.731@0.23.1280.731" timestamp="1596153397910" />
   </component>
 </project>
