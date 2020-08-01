@@ -1,12 +1,5 @@
-# Imports for python file (.py)
 import pygame
 import game_graphs as gr
-
-# Imports for JupyterLab notebook file (.ipynb)
-# import pygame
-# import ipynb.fs.full.game_graphs as gr
-
-
 
 class PathSearch:
     def __init__(self, g_set, alg, g):
@@ -24,10 +17,10 @@ class PathSearch:
         self.came_from[g_set.start] = None
         self.cost_so_far[g_set.start] = 0
 
-        if self.alg == 'bfs':
+        if self.alg == 'Breadth First Search':
             self.frontier = gr.Queue()
             self.frontier.put(self.start)
-        elif self.alg != 'bfs':
+        else:
             self.frontier = gr.PriorityQueue()
             self.frontier.put(self.start, 0)
 
@@ -39,29 +32,17 @@ class PathSearch:
         while not self.frontier.empty() and running:
             current = self.frontier.get()
             self.current = current
-
             if current == self.goal:
                 finish = True
                 break
-
-            elif self.alg == 'bfs':
-                # current_frontier, current_visited = self.breadth_first_search()
+            elif self.alg == 'Breadth First Search':
                 self.breadth_first_search()
-
-            elif self.alg == 'greedy':
-                # current_frontier, current_visited = self.greedy()
+            elif self.alg == 'Greedy Best First Search':
                 self.greedy()
-
-            elif self.alg == 'astar':
-                # current_frontier, current_visited = self.a_star()
+            elif self.alg == 'A* Search Algorithm':
                 self.a_star()
-
-            elif self.alg == 'dij':
-                # current_frontier, current_visited = self.dijkstras()
+            elif self.alg == "Dijkstra's Algorithm":
                 self.dijkstras()
-
-            # self.g.frontier = current_frontier
-            # self.g.visited = current_visited
             self.g.frontier = self.current_front
             self.g.visited = self.current_visit
             self.g.add_frontier()
@@ -69,7 +50,6 @@ class PathSearch:
             if not finish:
                 move = False
                 while not move:
-                    # pygame.event.pump()
                     pygame.event.get()
                     key = pygame.key.get_pressed()
                     if key[pygame.K_SPACE]:
@@ -84,7 +64,7 @@ class PathSearch:
                         running = False
                         break
 
-        if self.frontier.empty() and self.current != self.goal:  ### SINCE frontier is DICTIONARY, CHECK DEAD END IN BETTER WAY
+        if self.frontier.empty() and self.current != self.goal:
             return False
         else:
             return True
@@ -96,7 +76,6 @@ class PathSearch:
                 self.came_from[n] = self.current
         self.current_front = list(self.frontier.elements)
         self.current_visit = list(set(key for key in self.came_from))
-        # return current_front, current_visit
 
     def greedy(self):
         for n in self.g.neighbors(self.current):
@@ -106,7 +85,6 @@ class PathSearch:
                 self.came_from[n] = self.current
         self.current_front = [item[1] for item in self.frontier.elements]
         self.current_visit = list(set(key for key in self.came_from))
-        # return current_front, current_visit
 
     def dijkstras(self):
         for n in self.g.neighbors(self.current):
@@ -116,10 +94,8 @@ class PathSearch:
                 priority = new_cost
                 self.frontier.put(n, priority)
                 self.came_from[n] = self.current
-
         self.current_front = [item[1] for item in self.frontier.elements]
         self.current_visit = list(set(key for key in self.came_from))
-        # return current_front, current_visit
 
     def a_star(self):
         for n in self.g.neighbors(self.current):
@@ -131,7 +107,6 @@ class PathSearch:
                 self.came_from[n] = self.current
         self.current_front = [item[1] for item in self.frontier.elements]
         self.current_visit = list(set(key for key in self.came_from))
-        # return current_front, current_visit
 
     def construct_path(self):
         path_loc = self.goal
