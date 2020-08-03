@@ -13,13 +13,16 @@ To run the code:
 - Run the game.py file 
 
 *1) Main Menu*: Pick which algorithm you would like to run by clicking the button.
+
 ![picture](images/pathmenu.png)
 
 *2) Build Maze*: Click mouse and/or hold down mouse over the grid to add or remove walls. Press "ENTER" once finished.
+
 ![picture](images/pathgridblank.png)
 ![picture](images/pathgridmaze.png)
 
 *3) Start Search*: Click or hold down "RIGHT" arrow key to visualize the search method. Alternatively, you can press "SPACE" to jump to the end search results.
+
 ![picture](images/pathsearch1.png)
 ![picture](images/pathsearch2.png)
 ![picture](images/pathsearch3.png)
