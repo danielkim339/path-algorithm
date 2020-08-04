@@ -1,8 +1,6 @@
 
 class Settings:
-
     def __init__(self, alg=None):
-
         # game_graphs settings
         self.node_width = 20
         self.node_height = 20

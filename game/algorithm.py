@@ -2,6 +2,7 @@ import pygame
 import game_graphs as gr
 
 class PathSearch:
+
     def __init__(self, g_set, alg, g):
         self.g_set = g_set
         self.start = self.g_set.start

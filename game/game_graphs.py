@@ -3,7 +3,6 @@ import collections
 import heapq
 import numpy as np
 
-
 class Queue:
     def __init__(self):
         self.elements = collections.deque()

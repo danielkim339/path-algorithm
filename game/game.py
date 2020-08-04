@@ -1,7 +1,7 @@
 import pygame
-import game_graphs as gr
-import game_settings as gs
-import algorithm as algorithm
+# import game_graphs as gr
+# import game_settings as gs
+from algorithm import PathSearch
 
 # Helper game functions.
 def quit_game(g_set, g, gameDisplay):
@@ -42,6 +42,7 @@ def clicked_node(g_set):
 
 # Main game functions.
 def menu(g_set, g, gameDisplay):
+
     while g_set.running:
         pygame.display.set_caption('Pathfinder Menu')
         for event in pygame.event.get():
@@ -73,7 +74,6 @@ def menu(g_set, g, gameDisplay):
         button(" Quit ", 60, 400, 400, 40, g_set.RED, g_set.BRIGHT_RED, g_set, g, gameDisplay, quit_game)
 
         pygame.display.update()
-        clock.tick(15)
 
 
 def game_loop(g_set, g, gameDisplay):
@@ -121,7 +121,7 @@ def game_loop(g_set, g, gameDisplay):
         if not g_set.running:
             return
         elif start_search and g_set.running:
-            results = algorithm.PathSearch(g_set, g_set.alg_type, g)
+            results = PathSearch(g_set, g_set.alg_type, g)
             valid_path = results.search_loop(gameDisplay)
             if not valid_path:
                 pygame.display.set_caption('Dead end. Try again.')
@@ -136,23 +136,3 @@ def game_loop(g_set, g, gameDisplay):
                 # results.g.update_grid(gameDisplay)
 
 
-if __name__ == '__main__':
-    pygame.init()
-    pygame.font.init()
-    g_set = gs.Settings()
-    start = g_set.start
-    goal = g_set.goal
-
-    g = gr.WeightedGraph(g_set.grid_width, g_set.grid_height, g_set)
-    g.construct_graph(start=start, goal=goal)
-
-    gameDisplay = pygame.display.set_mode((g_set.display_width, g_set.display_height))
-    gameDisplay.fill(g_set.BLACK)
-    clock = pygame.time.Clock()
-
-    while g_set.running:
-        menu(g_set, g, gameDisplay)
-        game_loop(g_set, g, gameDisplay)
-
-    pygame.quit()
-    quit()
