@@ -2,15 +2,16 @@
 
 This pathfinding visualization project demonstrates the difference between four popular graph searching algorithms. They all utilized concepts of graph theory to and although the visualization may seem simply, the algorithms driving the code are relevant to biomedical networks, automation, data mining, and many more processes. 
 
-For proper execution of the code, look at the followng files:
-- Pipfile shows the 3rd-party packages used and required to run the project. 
-- requirements.txt shows the names and versions of all the build-in and 3rd party packages used to develop the project.
+Requirements to run game package (refer to Pipfile):
+- Python 3.6.x
+- numpy 
+- pygame
 
-To run the code:
-- Ensure python version 3.6 is running (required for pygame version)
-- Check if all 3rd-party packages are present
-- Clone the repository
-- Run the game.py file 
+If you are unsure whether your current enviornment configuration satisfies the project's dependencies, you can install the package(s) and/or version(s) required to run with the following steps.
+- Clone the GitHub repository
+- Download Pipenv on your system -> pip install pipenv
+- Type the following at command line -> pipenv install
+- This will automatically use the Pipfiles to create a virtual enviornment on your system that satisfies the required dependencies. 
 
 *1) Main Menu*: Pick which algorithm you would like to run by clicking the button.
 
