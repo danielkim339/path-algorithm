@@ -1,0 +1,12 @@
+README.md
+setup.py
+game/__init__.py
+game/algorithm.py
+game/game.py
+game/game_graphs.py
+game/game_settings.py
+game.egg-info/PKG-INFO
+game.egg-info/SOURCES.txt
+game.egg-info/dependency_links.txt
+game.egg-info/requires.txt
+game.egg-info/top_level.txt
