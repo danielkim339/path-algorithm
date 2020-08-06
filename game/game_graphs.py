@@ -166,10 +166,10 @@ class WeightedGraph(SquareGraph):
         return self.weights.get(to_node, 1)
 
 
-def heuristic(a, b, dist='m'):
+def heuristic(a, b, dist=None):
     (x1, y1) = a
     (x2, y2) = b
-    if dist == 'm':      # Manhattan distance
+    if dist == None:      # Manhattan distance
         return abs(x1 - x2) + abs(y1 - y2)
     elif dist == 'e':    # Euclidean distance
         return np.around(np.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2), decimals=2)
