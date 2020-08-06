@@ -7,7 +7,7 @@ Requirements to run game package (refer to Pipfile):
 - numpy 
 - pygame
 
-If you are unsure whether your current enviornment configuration satisfies the project's dependencies, you can install the package(s) and/or version(s) required to run with the following steps.
+If you are unsure whether your current enviornment configuration satisfies the project's dependencies, you can install the package(s) and/or version(s) required to run with the following steps (*currently working on this part): 
 - Clone the GitHub repository
 - Download Pipenv on your system -> pip install pipenv
 - Type the following at command line -> pipenv install
