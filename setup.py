@@ -39,7 +39,7 @@ setup(
             "typing==3.7.4.3; python_version < '3.7'",
             "urllib3==1.25.10; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4' and python_version < '4'",
             "vistir==0.5.2; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
-            "wheel==0.34.2; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
+            "wheel==0.38.1; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
             "zipp==3.1.0; python_version < '3.8'",
         ]
     },
